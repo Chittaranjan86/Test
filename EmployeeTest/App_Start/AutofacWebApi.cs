@@ -28,9 +28,11 @@ namespace EmployeeTest.App_Start
                 //Register your Web API controllers.  
                 builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
 
+
+
              
                 builder.RegisterGeneric(typeof(EmployeeRepository<Models.Employee>))
-                       .As(typeof(IEmployeeRepository<>))
+                       .As(typeof(IEmployeeRepository<Models.Employee>))
                        .InstancePerRequest();
 
                 //Set the dependency resolver to be Autofac.  
