@@ -28,9 +28,6 @@ namespace EmployeeTest.App_Start
                 //Register your Web API controllers.  
                 builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
 
-
-
-             
                 builder.RegisterGeneric(typeof(EmployeeRepository<Models.Employee>))
                        .As(typeof(IEmployeeRepository<Models.Employee>))
                        .InstancePerRequest();
