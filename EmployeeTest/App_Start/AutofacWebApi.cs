@@ -30,7 +30,7 @@ namespace EmployeeTest.App_Start
 
              
                 builder.RegisterGeneric(typeof(EmployeeRepository<Models.Employee>))
-                       .As(typeof(IEmployeeRepository<>))
+                       .As(typeof(IEmployeeRepository<Models.Employee>))
                        .InstancePerRequest();
 
                 //Set the dependency resolver to be Autofac.  
