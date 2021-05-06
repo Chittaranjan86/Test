@@ -10,7 +10,6 @@ namespace EmployeeTest.DataAccessLayer.Repository
 {
     public class EmployeeRepository<T> : IEmployeeRepository<T> where T : class
     {
-
         public int AddEmployee(Employee emp)
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["EmployeeDB"].ConnectionString))
